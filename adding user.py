@@ -1,5 +1,6 @@
 import os
 def new_user():
+#Not sure
     confirm = "N"
     while confirm != "Y":
         username = str(input("Enter the name a the user to add: "))
