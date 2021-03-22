@@ -21,7 +21,7 @@ fi
 cut=$((bub + 1))
 adder=$((cut + nub))
 #printing files being created.
-echo "Files ""$name""$bub"".txt to ""$name""$adder"".txt have been created."
+echo "Files ""$name""$cut"".txt to ""$name""$adder"".txt have been created."
 read -n 1 -s -r -p "Press any key to continue." | pr -dT
 clear
 #loop to create the 25 files. Alternative since bash does not accept variables for range.
