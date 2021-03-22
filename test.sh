@@ -3,7 +3,7 @@ read -n 1 -s -r -p "Press any key to continue." | pr -dT
 clear 
 #user input
 read -p "Enter filename of: " name
-#file check to see if file with user input exist. if not crwat the first one.
+#file check to see if file with user input exist. if not create the first one.
 if [ -f "$name[0-9]".txt ]; then
     :
 else
@@ -11,7 +11,7 @@ else
 fi
 #calls directory with ls. grep finds files with name. egrep seperates the number from the file. sort arranges numbers. tail out put one value to the variable.
 bub=$(ls | grep "$name[0-9]"*.txt | egrep -o '[0-9]+' | sort -n | tail -1)
-#condition for needed because if tbere no files one is creates so ine less is needed.
+#condition for needed because if there no files one is creates so ine less is needed.
 if [[ $bub == 1 ]] ; then
     nub=23
 elif [[ $bub > 1 ]] ; then
